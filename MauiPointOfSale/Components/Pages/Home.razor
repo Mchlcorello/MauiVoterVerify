@@ -1,0 +1,62 @@
+﻿@page "/"
+@using MauiPointOfSale.Services
+
+@inject NavigationManager Nav
+@inject ICameraStateContainer CameraContainer
+@inject IdentityService API
+
+<MudTabs Centered="true" Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
+    <MudTabPanel Text="Voter">
+        @if(Response is not null)
+        {
+            <p>@(GetJson())</p>
+        }
+        else
+        {
+            <div class="d-flex flex-column">
+                @if (CameraContainer.WorkFlowState == WorkflowState.Done)
+                {
+                    <button style="margin-bottom: 20px;" @onclick="@VerifyData">Verify</button>
+                }
+                else
+                {
+                    <button style="margin-bottom: 20px;" @onclick="@NavigateToCamera">Go To Camera</button>
+                }
+                @if (!string.IsNullOrEmpty(CameraContainer.FrontDriverIdBase64))
+                {
+                    <img src="@CameraContainer.FrontDriverIdBase64" height="200px" />
+                }
+                @if (!string.IsNullOrEmpty(CameraContainer.BackDriverIdBase64))
+                {
+                    <img src="@CameraContainer.BackDriverIdBase64" height="200px" />
+                }
+            </div>
+        }
+    </MudTabPanel>
+    <MudTabPanel Text="Clerk">
+
+
+        <button @onclick="ShowStuff">Get Json</button>
+        <p>@Json</p>
+        @* <div class="d-flex flex-column">
+            @if (CameraContainer.WorkFlowState == WorkflowState.Done)
+            {
+                <button style="margin-bottom: 20px;" @onclick="@VerifyData">Verify</button>
+            }
+            else
+            {
+                <button style="margin-bottom: 20px;" @onclick="@NavigateToCamera">Go To Camera</button>
+            }
+            @if (!string.IsNullOrEmpty(CameraContainer.FrontDriverIdBase64))
+            {
+                <img src="@CameraContainer.FrontDriverIdBase64" height="200px" />
+            }
+            @if (!string.IsNullOrEmpty(CameraContainer.BackDriverIdBase64))
+            {
+                <img src="@CameraContainer.BackDriverIdBase64" height="200px" />
+            }
+        </div> *@
+    </MudTabPanel>
+</MudTabs>
+
+

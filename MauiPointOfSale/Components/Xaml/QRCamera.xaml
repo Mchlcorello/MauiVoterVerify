@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBlazorBarCodeScanner.XamlPages.QRCamera"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             xmlns:local="clr-namespace:MauiBlazorBarCodeScanner.XamlPages"
+             Title="QRCamera">
+    <ScrollView>
+        <VerticalStackLayout
+                VerticalOptions="Fill"
+                HorizontalOptions="Fill">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <cv:CameraView x:Name="cameraView" 
+                    Grid.Row="0"
+                    CamerasLoaded="CameraView_CamerasLoaded"
+                    MaximumHeightRequest="500">
+                </cv:CameraView>
+                <Image Grid.Row="1" x:Name="myImage" WidthRequest="200" HeightRequest="200"></Image>
+                <Button Grid.Row="2"
+                    Text="Take Photo"
+                    Clicked="Button_Clicked"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End"/>
+                <Button Grid.Row="3"
+                        Text="Navigate Back"
+                        Clicked="NavigateBackToMainPage"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="End"/>
+            </Grid>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

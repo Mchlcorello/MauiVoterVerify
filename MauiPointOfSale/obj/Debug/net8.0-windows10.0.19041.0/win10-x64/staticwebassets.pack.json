@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Repos\\MauiPointOfSale\\MauiPointOfSale\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\MauiPointOfSale.styles.css",
+      "PackagePath": "staticwebassets\\MauiPointOfSale.styles.css"
+    },
+    {
+      "Id": "C:\\Repos\\MauiPointOfSale\\MauiPointOfSale\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Repos\\MauiPointOfSale\\MauiPointOfSale\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Repos\\MauiPointOfSale\\MauiPointOfSale\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Repos\\MauiPointOfSale\\MauiPointOfSale\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Repos\\MauiPointOfSale\\MauiPointOfSale\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.MauiPointOfSale.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.MauiPointOfSale.props",
+      "PackagePath": "build\\MauiPointOfSale.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.MauiPointOfSale.props",
+      "PackagePath": "buildMultiTargeting\\MauiPointOfSale.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.MauiPointOfSale.props",
+      "PackagePath": "buildTransitive\\MauiPointOfSale.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
